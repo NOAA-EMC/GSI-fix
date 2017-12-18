@@ -52,6 +52,21 @@ state_vector::
  sst       1      0     met_guess    sst
 ::
 
+control_vector_enkf::
+!var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
+ u        64      0       0.60        -1.0     state    u,v
+ v        64      0       0.60        -1.0     state    u,v
+ ps        1      0       0.75        -1.0     state    prse
+!pst       1      0       0.75        -1.0     state    prse,u,v
+ tv       64      0       0.75        -1.0     state    tv
+ q        64      1       0.75        -1.0     state    q
+ oz       64      1       0.75        -1.0     state    oz
+!sst       1      0       1.00        -1.0     state    sst
+!cw       64      1       1.00        -1.0     state    cw
+!stl       1      0       3.00        -1.0     motley   sst
+!sti       1      0       3.00        -1.0     motley   sst
+::
+
 control_vector::
 !var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
  sf       64      0       0.60        -1.0     state    u,v
