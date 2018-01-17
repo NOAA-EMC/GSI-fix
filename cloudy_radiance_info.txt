@@ -1,6 +1,7 @@
 radiance_mod_instr_input::
-!obsname    obsloc    ex_obserr  ex_biascor  cld_effect  
- amsua      sea       .true.     .true.      .true.     
+!obsname    obsloc    ex_obserr  ex_biascor  cld_effect 
+ amsua      sea       .true.     .true.      .true.    
+ atms       sea       .true.     .true.      .true.   
 :: 
   
 obs_amsua::
@@ -16,3 +17,24 @@ obs_amsua::
     6   0.100  1.500
    15   0.030  0.200
 ::        
+
+obs_atms::
+!  Parameters for the observation error model
+!  cclr [kg/m2] & ccld [kg/m2]: range of cloud amounts
+!  over which the main increase in error take place
+!  ch   cclr   ccld
+    1   0.030  0.350
+    2   0.030  0.380
+    3   0.030  0.400
+    4   0.020  0.450
+    5   0.030  0.500
+    6   0.080  1.000
+    7   0.150  1.000
+   16   0.020  0.350
+   17   0.030  0.500
+   18   0.030  0.500
+   19   0.030  0.500
+   20   0.030  0.500
+   21   0.050  0.500
+   22   0.100  0.500
+::
