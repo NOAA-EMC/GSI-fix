@@ -1,7 +1,7 @@
 radiance_mod_instr_input::
 !obsname    obsloc    ex_obserr  ex_biascor  cld_effect 
- amsua      sea       .true.     .true.      .true.    
- atms       sea       .true.     .true.      .true.   
+ amsua      sea       ex_obserr1   .true.      .true.    
+ atms       sea       ex_obserr1   .true.      .true.   
 :: 
   
 obs_amsua::
