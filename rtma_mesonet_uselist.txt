@@ -1,24 +1,20 @@
 *****************************
 Use list for mesonet data
 *****************************
-RAWS    allsubprv
 FL-Meso FAWN
-NEDOR   allsprvs
 SFWMD   allsprvs
-MOComAgNallsprvs
-UDFCD   allsprvs
 CAIC    allsprvs
-CODOT   allsprvs
-KSDOT   allsprvs
-IADOT   allsprvs
-MEDOT   allsprvs
-MNDOT   allsprvs
-NDDOT   allsprvs
 OK-Meso allsprvs
-MesoWestallsprvs
 WT-Meso allsprvs
 WYDOT   allsprvs
 NOS-PORTallsprvs
 NOS-NWLOallsprvs
 GoMOOS  allsprvs
-HADS    allsprvs
+LSU-JSU allsprvs
+NYSM    allsprvs
+NJWxNet allsprvs
+WxFlow  allsprvs
+UrbaNet allsprvs
+NonFedAWallsprvs
+ARLFRD  allsprvs
+RAWS    allsprvs
