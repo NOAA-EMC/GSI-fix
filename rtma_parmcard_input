@@ -35,7 +35,7 @@
     rltop_howv=50000000.,
     rltop_tcamt=5000.,
     rltop_lcbas=10000.,
-    rltop_cldch=50000000.,
+    rltop_cldch=2000.,
     svpsi=0.21,
     svchi=0.2888,
     svpsi_w=0.21,
@@ -45,7 +45,7 @@
     svshum=0.75,
     svgust=1.0,
     svgust_w=1.0,
-    svvis=0.25,
+    svvis=1.0875,
     svpblh=1.0,
     svwspd10m=1.0,
     svwspd10m_w=1.0,
@@ -58,7 +58,7 @@
     svtcamt_w=1.0,
     svlcbas=1.0,
     svlcbas_w=1.0,
-    svcldch=0.125,
+    svcldch=0.9816,
     sclpsi=0.324,
     sclchi=0.324,
     sclpsi_w=0.4725,
@@ -68,7 +68,7 @@
     sclhum=0.54
     sclgust=0.463,
     sclgust_w=0.6752,
-    sclvis=0.60,
+    sclvis=0.45,
     sclpblh=0.45,
     sclwspd10m=0.463,
     sclwspd10m_w=0.6752,
@@ -81,7 +81,9 @@
     scltcamt_w=1.0,
     scllcbas=1.0,
     scllcbas_w=1.0
-    sclcldch=0.60,
+    sclcldch=0.45,
+/
+&valleymapsettings
 /
 &parmcardreadprepb
     cgrid='cohreswexp',
@@ -91,11 +93,12 @@
     jneighbour=3,
     lshoreline=.false.,
     slmland=0.9,
-    valleygcheck=.true.
+    valleygcheck=.true.,
 /
 &parmcardhcurve
     random_cvgrp=.true.,
     usagecv=3.,
+    usage_dup=3.,
     ngrps_tob=5,
     ngrps_qob=5,
     ngrps_psob=5,
