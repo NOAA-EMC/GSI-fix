@@ -19,7 +19,6 @@
  amsua_aqua              -48.333      3.333        30     4    27
  hirs4_metop-a           -49.500      1.800        56     7    50
  hirs4_metop-b           -49.500      1.800        56     7    50
- hirs4_metop-c           -49.500      1.800        56     7    50
  amsua_metop-a           -48.333      3.333        30     4    27
  amsua_metop-b           -48.333      3.333        30     4    27
  amsua_metop-c           -48.333      3.333        30     4    27
