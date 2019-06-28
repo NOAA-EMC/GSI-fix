@@ -54,13 +54,13 @@ state_vector::
 
 control_vector_enkf::
 !var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
- u       127      0       0.60        -1.0     state    u,v
- v       127      0       0.60        -1.0     state    u,v
- ps        1      0       0.75        -1.0     state    prse
-!pst       1      0       0.75        -1.0     state    prse,u,v
- tv      127      0       0.75        -1.0     state    tv
- q       127      1       0.75        -1.0     state    q
- oz      127      1       0.75        -1.0     state    oz
+ u       127      0       1.00        -1.0     state    u,v
+ v       127      0       1.00        -1.0     state    u,v
+ ps        1      0       1.20        -1.0     state    prse
+!pst       1      0       1.20        -1.0     state    prse,u,v
+ tv      127      0       1.50        -1.0     state    tv
+ q       127      1       1.50        -1.0     state    q
+ oz      127      1       2.00        -1.0     state    oz
 !sst       1      0       1.00        -1.0     state    sst
 !cw      127      1       1.00        -1.0     state    cw
 !stl       1      0       3.00        -1.0     motley   sst
@@ -69,12 +69,12 @@ control_vector_enkf::
 
 control_vector::
 !var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
- sf      127      0       0.60        -1.0     state    u,v
- vp      127      0       0.60        -1.0     state    u,v
- ps        1      0       0.75        -1.0     state    prse
- t       127      0       0.75        -1.0     state    tv
- q       127      1       0.75        -1.0     state    q
- oz      127      1       0.75        -1.0     state    oz
+ sf      127      0       1.00        -1.0     state    u,v
+ vp      127      0       1.00        -1.0     state    u,v
+ ps        1      0       1.20        -1.0     state    prse
+ t       127      0       1.50        -1.0     state    tv
+ q       127      1       1.50        -1.0     state    q
+ oz      127      1       2.00        -1.0     state    oz
  sst       1      0       1.00        -1.0     state    sst
  cw      127      1       1.00        -1.0     state    cw
  stl       1      0       3.00        -1.0     motley   sst
