@@ -1,3 +1,13 @@
+correlated_observations::
+! isis          method   kreq   kmult   type    cov_file
+iasi_metop-a      2       0.0     1.0    sea     Rcov_iasiasea
+iasi_metop-b      2       0.0     1.0    sea     Rcov_iasibsea
+iasi_metop-a      2       0.0     1.0    land    Rcov_iasialand
+iasi_metop-b      2       0.0     1.0    land    Rcov_iasibland
+cris-fsr_n20      2       0.0     1.0    sea     Rcov_crisn20
+cris-fsr_npp      2       0.0     1.0    sea     Rcov_crisnpp
+::
+
 met_guess::
 !var     level    crtm_use    desc              orig_name
   ps        1      -1         surface_pressure     ps
