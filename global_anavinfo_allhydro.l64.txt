@@ -1,13 +1,3 @@
-correlated_observations::
-! isis          method   kreq   kmult   type    cov_file
-iasi_metop-a      2       0.0     1.0    sea     Rcov_iasiasea
-iasi_metop-b      2       0.0     1.0    sea     Rcov_iasibsea
-iasi_metop-a      2       0.0     1.0    land    Rcov_iasialand
-iasi_metop-b      2       0.0     1.0    land    Rcov_iasibland
-cris-fsr_n20      2       0.0     1.0    sea     Rcov_crisn20
-cris-fsr_npp      2       0.0     1.0    sea     Rcov_crisnpp
-::
-
 met_guess::
 !var     level    crtm_use    desc              orig_name
   ps        1      -1         surface_pressure     ps
@@ -19,9 +9,12 @@ met_guess::
   tv       64       2         virtual_temperature  tv
   q        64       2         specific_humidity    sphu
   oz       64       2         ozone                ozone
-  cw       64      10         cloud_condensate     cw
   ql       64      12         cloud_liquid         ql 
   qi       64      12         cloud_ice            qi 
+  qr       64      12         rain                 qr
+  qs       64      12         snow                 qs
+  qg       64      12         graupel              qg
+  cf       64       1         cloud amount         cf
 ::
 
 state_derivatives::
@@ -30,10 +23,6 @@ state_derivatives::
  u    64     met_guess
  v    64     met_guess
  tv   64     met_guess
- q    64     met_guess
- oz   64     met_guess
- cw   64     met_guess
- prse 65     met_guess
 ::
 
 state_tendencies::
@@ -41,10 +30,6 @@ state_tendencies::
  u    64      met_guess
  v    64      met_guess
  tv   64      met_guess
- q    64      met_guess
- cw   64      met_guess
- oz   64      met_guess
- prse 65      met_guess
 ::
 
 state_vector::  
@@ -55,8 +40,11 @@ state_vector::
  tsen     64      0     met_guess    tv,q
  q        64      1     met_guess    q
  oz       64      1     met_guess    oz
- ql       64      1     met_guess    ql 
- qi       64      1     met_guess    qi 
+ ql       64      1     met_guess    ql
+ qi       64      1     met_guess    qi
+ qr       64      1     met_guess    qr
+ qs       64      1     met_guess    qs
+ qg       64      1     met_guess    qg
  prse     65      0     met_guess    prse
  ps        1      0     met_guess    prse
  sst       1      0     met_guess    sst
@@ -86,7 +74,11 @@ control_vector::
  q        64      1       0.75        -1.0     state    q
  oz       64      1       0.75        -1.0     state    oz
  sst       1      0       1.00        -1.0     state    sst
- cw       64      1       1.00        -1.0     state    cw
+ ql       64      1       1.00        -1.0     state    ql
+ qi       64      1       1.00        -1.0     state    qi
+ qr       64      1       1.00        -1.0     state    qr
+ qs       64      1       1.00        -1.0     state    qs
+ qg       64      1       1.00        -1.0     state    qg
  stl       1      0       3.00        -1.0     motley   sst
  sti       1      0       3.00        -1.0     motley   sst
 ::
