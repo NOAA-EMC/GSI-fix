@@ -22,6 +22,16 @@ met_guess::
   cldch     1      -1         cloud_ceiling_height cldch
   uwnd10m   1      -1         10m_u-wind           uwnd10m
   vwnd10m   1      -1         10m_v-wind           vwnd10m
+  presgsfc  1      -1         model pressure       presgsfc
+  presgrid1 1      -1         level1_pressure      presgrid1
+  presgrid2 1      -1         level2_pressure      presgrid2
+  tmpgrid1  1      -1         level1_temperatur    tmpgrid1
+  tmpgrid2  1      -1         level2_temperatur    tmpgrid2
+  qgrid1    1      -1         level1_specifich     qgrid1
+  qgrid2    1      -1         level2_specifich     qgrid2
+  ugrid1    1      -1         level1_zonal_wind    ugrid1
+  vgrid1    1      -1         level1_merid_wind    vgrid1
+  hgtgrid1  1      -1         level1_height        hgtgrid1
 !Yanqiu: if this is needed to do gust/vis, please uncomment
 ! pblh      1      -1         pbl_height           pblh
 ::
