@@ -45,4 +45,6 @@
  avhrr3_metop-b          -52.612      1.182        90     1    90
  avhrr3_metop-c          -52.612      1.182        90     1    90
  saphir_meghat           -42.960      0.666       130     1   130
+ viirs-m_npp             -56.280      1.265        90     1    90
+ viirs-m_j1              -56.280      1.265        90     1    90
 !sat_sis                  start       step      nstep  edge1  edge2
