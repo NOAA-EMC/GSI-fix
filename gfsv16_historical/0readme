@@ -10,8 +10,9 @@ global_convinfo.txt.2020052612: Turn on COSMIC-2 GPSRO
 global_convinfo.txt.2020082412: Turn on hurricane recon obs (T,q)
                                 See also prepobs_errtable.global.2020082412
 global_convinfo.txt.2020091612: Turn on MetOp-C GRAS (GPSRO)
-global_convinfo.txt.2021031712: First GPSRO data buy
-global_convinfo.txt.2021091612: Refine GPSRO obs errors; 2nd GPSRO data buy
+global_convinfo.txt.2021031712: GPSRO data buy DO-2 (GeoOptics)
+global_convinfo.txt.2021091612: Refine GPSRO obs errors; GPSRO DO-3 (Spire)
+global_convinfo.txt.2022031612: GPSRO DO-4 (Spire and GeoOptics)
 global_ozinfo.txt.2019021900: "Baseline:
 global_ozinfo.txt.2020011600: Turn off S-NPP OMPS Nadir Profiler and Total Column product 
 global_ozinfo.txt.2020011806: Turn on S-NPP OMPS Nadir Profiler and Total Column product again
