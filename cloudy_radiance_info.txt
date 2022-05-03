@@ -1,8 +1,9 @@
 radiance_mod_instr_input::
-!obsname    obsloc    ex_obserr  ex_biascor  cld_effect 
- amsua      sea       ex_obserr1   .true.      .true.    
- atms       sea       ex_obserr1   .true.      .true.   
-:: 
+!obsname    obsloc    ex_obserr  ex_biascor  cld_effect
+ gmi        sea       ex_obserr3   .true.      .false.
+ amsua      sea       ex_obserr1   .true.      .true.
+ atms       sea       ex_obserr1   .true.      .true.
+::
   
 obs_amsua::
 !  Parameters for the observation error model
@@ -38,3 +39,24 @@ obs_atms::
    21   0.050  0.500
    22   0.100  0.500
 ::
+
+obs_gmi::
+!  Parameters for the observation error model
+!  cclr [kg/m2] & ccld [kg/m2]: range of cloud amounts
+!  over which the main increase in error take place
+!  ch   cclr   ccld   cldval1
+    1   0.050  0.200  17.00
+    2   0.050  0.200  23.00
+    3   0.050  0.200  13.00
+    4   0.050  0.200  25.00
+    5   0.050  0.200  11.00
+    6   0.050  0.200  13.00
+    7   0.050  0.200  23.00
+    8   0.050  0.200  10.00
+    9   0.050  0.200  20.00
+   10   0.050  0.300  15.00
+   11   0.050  0.200  20.00
+   12   0.050  0.300   8.00
+   13   0.050  0.300  13.00
+::
+
