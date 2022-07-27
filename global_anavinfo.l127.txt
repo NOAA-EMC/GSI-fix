@@ -62,6 +62,18 @@ state_vector::
  sst       1      0     met_guess    sst
 ::
 
+
+state_vector_efsoi::
+!var     level  itracer source     funcof
+ u       127      0     met_guess    u
+ v       127      0     met_guess    v
+ tv      127      0     met_guess    tv
+ q       127      1     met_guess    q
+ ps        1      0     met_guess    prse
+::
+
+
+
 control_vector_enkf::
 !var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
  u       127      0       1.00        -1.0     state    u,v
