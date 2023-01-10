@@ -19,12 +19,9 @@ met_guess::
   tv      127       2         virtual_temperature  tv
   q       127       2         specific_humidity    sphu
   oz      127       2         ozone                ozone
+  cw      127      10         cloud_condensate     cw
   ql      127      12         cloud_liquid         ql 
   qi      127      12         cloud_ice            qi 
-  qr      127      12         rain                 qr
-  qs      127      12         snow                 qs
-  qg      127      12         graupel              qg
-! cf      127       1         cloud amount         cf
 ::
 
 state_derivatives::
@@ -35,7 +32,7 @@ state_derivatives::
  tv   127    met_guess
  q    127    met_guess
  oz   127    met_guess
-!cw   127    met_guess
+ cw   127    met_guess
  prse 128    met_guess
 ::
 
@@ -45,7 +42,7 @@ state_tendencies::
  v    127     met_guess
  tv   127     met_guess
  q    127     met_guess
-!cw   127     met_guess
+ cw   127     met_guess
  oz   127     met_guess
  prse 128     met_guess
 ::
@@ -60,9 +57,6 @@ state_vector::
  oz      127      1     met_guess    oz
  ql      127      1     met_guess    ql 
  qi      127      1     met_guess    qi 
- qr      127      1     met_guess    qr
- qs      127      1     met_guess    qs
- qg      127      1     met_guess    qg
  prse    128      0     met_guess    prse
  ps        1      0     met_guess    prse
  sst       1      0     met_guess    sst
@@ -92,11 +86,7 @@ control_vector::
  q       127      1       1.50        -1.0     state    q
  oz      127      1       2.00        -1.0     state    oz
  sst       1      0       1.00        -1.0     state    sst
- ql      127      1       1.00        -1.0     state    ql
- qi      127      1       1.00        -1.0     state    qi
- qr      127      1       1.00        -1.0     state    qr
- qs      127      1       1.00        -1.0     state    qs
- qg      127      1       1.00        -1.0     state    qg
+ cw      127      1       1.00        -1.0     state    cw
  stl       1      0       3.00        -1.0     motley   sst
  sti       1      0       3.00        -1.0     motley   sst
 ::
