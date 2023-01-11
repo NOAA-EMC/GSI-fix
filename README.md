@@ -1,5 +1,5 @@
 # GSI-fix
-Static ASCII files used in the [GSI](https://github.com/NOAA-EMC/GSI) by various applications to describe the characteristics of the system.
+ASCII files that are used in the [GSI](https://github.com/NOAA-EMC/GSI) by various applications to describe the characteristics of the system.
 
 These include (but are not limited to):
 - observation error specifications for conventional and satellite-based measurements
@@ -13,10 +13,8 @@ The top level directory structure groups the files as follow:
 
 | File/directory            | Purpose |
 | --------------            | ------- |
-| ```LICENSE```             | A copy of the GNU Lesser General Public License, Version 2.1. |
 | ```README.md```           | This file with basic pointers to more information. |
-
-
+| ```LICENSE.md```          | A copy of the GNU Lesser General Public License, Version 3. |
 
 ## Disclaimer
 
