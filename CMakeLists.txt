@@ -46,7 +46,6 @@ list(APPEND gsi_binaries
   urma2p5_fltnorm.dat_howv
   urma2p5_rd2.out_namnest_wexp_on_cohreswexp
   urma2p5_fltnorm.dat_pseudorh
-  Big_Endian/
   Big_Endian/rtma_fltnorm.dat_ps
   Big_Endian/rtma_fltnorm.dat_td2m
   Big_Endian/global_berror.l64y130.f77
@@ -121,20 +120,31 @@ list(APPEND gsi_binaries
   Rcov_iasicsea
 )
 
-# Decide if GSI Binary files need to be downloaded or simply copied/linked
+# Decide if GSI Binary files need to be downloaded or simply copied.
 if(DEFINED ENV{GSI_BINARY_SOURCE_DIR})
   set(DOWNLOAD_TARBALL OFF)
+  set(GSI_BIN_FIX_DIR $ENV{GSI_BINARY_SOURCE_DIR})
 else()
   set(DOWNLOAD_TARBALL ON)
+  set(GSI_BIN_FIX_DIR ${CMAKE_CURRENT_BINARY_DIR})
 endif()
 
-# By default, do not try to download this monster of a tarball.
+# Set URL, sha256sum and tar name of the file to download.
+set(URL "https://ftp.emc.ncep.noaa.gov/static_files/public/gsi")
+set(SHA "1dd0bbaf7ab7452de9eb5949595540b20abc4e59439567a87c0b007de90fab3c")
+string(SUBSTRING ${SHA} 0 6 SHORTSHA)
+set(TAR "gsi-fix-${SHORTSHA}.tgz") # poor-man's version control
+
+# Check if the tarball is already downloaded.
+# This is possible if one runs cmake in the same build directory
+# In this case, we don't want to keep downloading over and over again
+if(EXISTS ${CMAKE_CURRENT_BINARY_DIR}/${TAR})
+  message(WARNING "${TAR} has already been downloaded, skipping download")
+  set(DOWNLOAD_TARBALL OFF)
+endif()
+
 if(DOWNLOAD_TARBALL)
-  # Set URL, sha256sum and tar name of the file to download.
-  set(URL "https://ftp.emc.ncep.noaa.gov/static_files/public/gsi")
-  set(SHA "1dd0bbaf7ab7452de9eb5949595540b20abc4e59439567a87c0b007de90fab3c")
-  string(SUBSTRING ${SHA} 0 6 SHORTSHA)
-  set(TAR "gsi-fix-${SHORTSHA}.tgz") # poor-man's version control
+  message(STATUS "Downloading ${TAR} from ${URL}")
 
   # Download binary fix files and check SHA256
   file(DOWNLOAD
@@ -149,14 +159,13 @@ if(DOWNLOAD_TARBALL)
 
   # Extract downloaded tarball.
   file(ARCHIVE_EXTRACT INPUT ${TAR})
-
-  # Set location of DIR_GSI_BINARY as CMAKE_CURRENT_BINARY_DIR
-  set(GSI_BINARY_SOURCE_DIR ${CMAKE_CURRENT_BINARY_DIR})
 endif()
 
-# Create links from the downloaded or central storage location
+# Copy from the downloaded or central storage location
+message(STATUS "Copying GSI binary fix files from ${GSI_BIN_FIX_DIR}")
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Big_Endian)
 foreach(file IN LISTS gsi_binaries)
-  file(CREATE_LINK ${GSI_BINARY_SOURCE_DIR}/${file} ${CMAKE_CURRENT_SOURCE_DIR}/${file})
+  message(DEBUG "copying ... ${file}")
+  file(COPY_FILE ${GSI_BIN_FIX_DIR}/${file} ${CMAKE_CURRENT_SOURCE_DIR}/${file} ONLY_IF_DIFFERENT)
 endforeach()
 
