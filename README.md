@@ -13,8 +13,10 @@ The top level directory structure groups the files as follow:
 
 | File/directory            | Purpose |
 | --------------            | ------- |
-| ```README.md```           | This file with basic pointers to more information. |
-| ```LICENSE.md```          | A copy of the GNU Lesser General Public License, Version 3. |
+| `README.md`           | This file with basic pointers to more information. |
+| `LICENSE.md`          | A copy of the GNU Lesser General Public License, Version 3. |
+| `CMakeLists.txt`      | `CMakeLists` file for use with GSI. |
+| `gsi_binary_files.cmake` | List of all binary files used in the GSI. |
 
 ## Disclaimer
 

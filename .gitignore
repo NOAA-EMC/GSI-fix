@@ -36,6 +36,8 @@ _pycache__/
 
 # The following binary files used to be in gerrit::GSI-fix rev2 branch
 # Explicitly list them here so they don't get accidentally added back
+# When new binary files are added to this list,
+# please also update gsi_binary_files.cmake so they can be included in the GSI project
 urma2p5_fltnorm.dat_mitm
 urma2p5_errfield_with_mitm.dat_clim
 500urma2p5_howv_lng_lat.bin
@@ -82,7 +84,6 @@ urma2p5_fltnorm.dat_wspd10m
 urma2p5_fltnorm.dat_howv
 urma2p5_rd2.out_namnest_wexp_on_cohreswexp
 urma2p5_fltnorm.dat_pseudorh
-Big_Endian/
 Big_Endian/rtma_fltnorm.dat_ps
 Big_Endian/rtma_fltnorm.dat_td2m
 Big_Endian/global_berror.l64y130.f77
