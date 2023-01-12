@@ -61,6 +61,9 @@ message(STATUS "Copying GSI binary fix files from ${GSI_BIN_FIX_DIR}")
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Big_Endian)
 foreach(file IN LISTS gsi_binaries)
   message(DEBUG "copying ... ${file}")
-  file(COPY_FILE ${GSI_BIN_FIX_DIR}/${file} ${CMAKE_CURRENT_SOURCE_DIR}/${file} ONLY_IF_DIFFERENT)
+  configure_file(${GSI_BIN_FIX_DIR}/${file} ${CMAKE_CURRENT_SOURCE_DIR}/${file} COPYONLY)
+  # TODO: When "who-shall-not-be-named" platforms update their CMake to v3.21.
+  # replace configure_file above with the file(COPY_FILE) below.
+  #file(COPY_FILE ${GSI_BIN_FIX_DIR}/${file} ${CMAKE_CURRENT_SOURCE_DIR}/${file} ONLY_IF_DIFFERENT)
 endforeach()
 
