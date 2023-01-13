@@ -8,6 +8,14 @@ These include (but are not limited to):
 - hybrid covariance weights
 - control and state vector descriptions
 
+Binary files used by the [GSI](https://github.com/NOAA-EMC/GSI) are **NOT** in [GSI-fix](https://github.com/NOAA-EMC/GSI-fix).
+Instead, GSI binary fix files are available from two sources:
+- staged in directory `GSI_BINARY_SOURCE_DIR` on WCOSS2 and select NOAA RHDPCS machines.
+  Variable `GSI_BINARY_SOURCE_DIR` is defined in [GSI](https://github.com/NOAA-EMC/GSI) `modulefiles/gsi_$machine.lua`
+  for some, but not all, machines.
+- downloadable as a tarball from https://ftp.emc.ncep.noaa.gov/static_files/public/gsi.
+
+
 ## What files are what
 The top level directory structure groups the files as follow:
 
