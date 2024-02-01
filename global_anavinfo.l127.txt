@@ -11,8 +11,6 @@ cris-fsr_n21      2       0.0     1.0    sea     Rcov_crisn21
 
 met_guess::
 !var     level    crtm_use    desc              orig_name
-  t2m       1      -1         2m_temperature       tmp2m
-  q2m       1      -1         2m_spec_humidity     spfh2m
   ps        1      -1         surface_pressure     ps
   z         1      -1         geopotential_height  phis
   u       127       2         zonal_wind           u
@@ -69,21 +67,7 @@ state_vector::
  prse    128      0     met_guess    prse
  ps        1      0     met_guess    prse
  sst       1      0     met_guess    sst
- t2m       1      0     met_guess    t2m
- q2m       1      0     met_guess    q2m
 ::
-
-
-state_vector_efsoi::
-!var     level  itracer source     funcof
- u       127      0     met_guess    u
- v       127      0     met_guess    v
- tv      127      0     met_guess    tv
- q       127      1     met_guess    q
- ps        1      0     met_guess    prse
-::
-
-
 
 control_vector_enkf::
 !var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
@@ -91,12 +75,6 @@ control_vector_enkf::
  v       127      0       1.00        -1.0     state    u,v
  ps        1      0       1.20        -1.0     state    prse
 !pst       1      0       1.20        -1.0     state    prse,u,v
- st1       1      0       1.00        -1.0     state    st1
- st2       1      0       1.00        -1.0     state    st2
- st3       1      0       1.00        -1.0     state    st3
- sl1       1      0       1.00        -1.0     state    sl1
- sl2       1      0       1.00        -1.0     state    sl2
- sl3       1      0       1.00        -1.0     state    sl3
  tv      127      0       1.50        -1.0     state    tv
  q       127      1       1.50        -1.0     state    q
  oz      127      1       2.00        -1.0     state    oz
