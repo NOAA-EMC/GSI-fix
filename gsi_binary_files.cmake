@@ -120,4 +120,5 @@ list(APPEND gsi_binaries
   Rcov_iasialand
   Rcov_crisnpp
   Rcov_iasicsea
+  Rcov_crisn21
 )
