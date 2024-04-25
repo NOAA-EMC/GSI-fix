@@ -24,8 +24,8 @@ R__BT_Threshold(1)=0.6
 L__Do_Imager_Cloud_Detection = .TRUE.
 N__Num_Imager_Chans = 2
 N__Num_Imager_Clusters = 7
-N__Imager_Chans(:) = 2, 3 
-R__Stddev_Threshold(:) = 0.60, 0.60
+N__Imager_Chans(1:2) = 2, 3 
+R__Stddev_Threshold(1:2) = 0.60, 0.60
 R__Coverage_Threshold = 0.3
 R__FG_Departure_Threshold = 2.0
 /

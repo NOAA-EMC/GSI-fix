@@ -46,8 +46,8 @@ N__Window_Width(1)=6
 L__Do_Imager_Cloud_Detection = .TRUE.
 N__Num_Imager_Chans = 2
 N__Num_Imager_Clusters = 7
-N__Imager_Chans(:) = 15, 16
-R__Stddev_Threshold(:) = 0.4, 0.4
+N__Imager_Chans(1:2) = 15, 16
+R__Stddev_Threshold(1:2) = 0.4, 0.4
 R__Coverage_Threshold = 0.3
 R__FG_Departure_Threshold = 2.0
 /
