@@ -123,7 +123,6 @@ list(APPEND gsi_binaries
   Rcov_crisn21
   global_berror.l127y194.nc
   global_berror.l127y386.nc
-  global_berror.l127y50.nc
   global_berror.l127y770.nc
   global_berror.l127y98.nc
   global_berror.l31y26.nc
