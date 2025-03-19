@@ -25,8 +25,8 @@ met_guess::
   qr      127      12         rain                 qr
   qs      127      12         snow                 qs
   qg      127      12         graupel              qg
-  ni      127       1         cloud_ice conc       ni
-  nr      127       1         rain conc            nr
+  t2m       1      -1         2m_temperature       tmp2m
+  q2m       1      -1         2m_spec_humidity     spfh2m
 ! cf      127       1         cloud amount         cf
 ::
 
@@ -69,7 +69,10 @@ state_vector::
  prse    128      0     met_guess    prse
  ps        1      0     met_guess    prse
  sst       1      0     met_guess    sst
+ t2m       1      0     met_guess    t2m
+ q2m       1      0     met_guess    q2m
 ::
+
 
 state_vector_efsoi::
 !var     level  itracer source     funcof
@@ -79,6 +82,8 @@ state_vector_efsoi::
  q       127      1     met_guess    q
  ps        1      0     met_guess    prse
 ::
+
+
 
 control_vector_enkf::
 !var     level  itracer as/tsfc_sdv  an_amp0   source  funcof
@@ -93,6 +98,12 @@ control_vector_enkf::
 !cw      127      1       1.00        -1.0     state    cw
 !stl       1      0       3.00        -1.0     motley   sst
 !sti       1      0       3.00        -1.0     motley   sst
+ st1       1      0       1.00        -1.0     state    st1
+ st2       1      0       1.00        -1.0     state    st2
+ st3       1      0       1.00        -1.0     state    st3
+ sl1       1      0       1.00        -1.0     state    sl1
+ sl2       1      0       1.00        -1.0     state    sl2
+ sl3       1      0       1.00        -1.0     state    sl3
 ::
 
 control_vector::
