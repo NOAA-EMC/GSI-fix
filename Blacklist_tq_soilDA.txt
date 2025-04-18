@@ -1,3 +1,0 @@
-!IOTYPE  ikx stn_id
- t       183 71464
- q       183 71464
