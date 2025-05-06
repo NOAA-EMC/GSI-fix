@@ -3,6 +3,7 @@ radiance_mod_instr_input::
  gmi        sea       ex_obserr3   .true.      .false.
  amsua      sea       ex_obserr1   .true.      .true.
  atms       sea       ex_obserr1   .true.      .true.
+ mws        sea       ex_obserr1   .true.      .true.
 ::
   
 obs_amsua::
@@ -38,6 +39,26 @@ obs_atms::
    20   0.030  0.500
    21   0.050  0.500
    22   0.100  0.500
+::
+
+obs_mws::
+!  Copied and edited from above table for atms. 
+!  ch   cclr   ccld
+    1   0.030  0.350
+    2   0.030  0.380
+    3   0.030  0.400
+    4   0.030  0.500
+    5   0.080  1.000
+    6   0.080  1.000
+    8   0.150  1.000
+   17   0.020  0.350
+   18   0.030  0.500
+   19   0.030  0.500
+   20   0.030  0.500
+   21   0.030  0.500
+   22   0.050  0.500
+   23   0.100  0.500
+   24   0.100  0.500
 ::
 
 obs_gmi::
