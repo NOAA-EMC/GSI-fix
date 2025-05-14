@@ -1,0 +1,3 @@
+!IOTYPE  ikx stn_id
+ t       181 71464
+ q       181 71464
