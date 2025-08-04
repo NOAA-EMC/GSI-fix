@@ -60,4 +60,5 @@
  viirs-m_j2              -56.280      1.265        90     1    90
  gmi_gpm                   0.000      1.000       221    15   207
  mws_metop-sg-a1        -49.3124     1.0492        95     1    95
+ amsr2_gcom-w1             0.000      1.000       243     1   243
 !sat_sis                  start       step      nstep  edge1  edge2
