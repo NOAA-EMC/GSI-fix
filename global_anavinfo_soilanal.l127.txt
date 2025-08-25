@@ -27,6 +27,8 @@ met_guess::
   qg      127      12         graupel              qg
   t2m       1      -1         2m_temperature       tmp2m
   q2m       1      -1         2m_spec_humidity     spfh2m
+  ni      127       1         cloud_ice conc       ni
+  nr      127       1         rain conc            nr
 ! cf      127       1         cloud amount         cf
 ::
 
