@@ -20,7 +20,8 @@ Summary of changes in historical files (see also https://github.com/NOAA-EMC/GSI
 | global_convinfo.txt.2022112912 | Changes to SST QC; Add obstypes 118 and 119 for ps/t/q;  Add obstypes 216-219 for uv; Metop-C AVHRR winds; LEO-GEO winds; Update ASCAT QC; Add PAZ GNSSRO | 
 | global_convinfo.txt.2023010412 | Switch AMVs from GOES-17 to GOES-18 |
 | global_convinfo.txt.2023091112 | Switch on Met-10 AMVs (replacing Met-11) |
-| global_convinfo.txt.2024120912 | Turn on Metop-C ASCAT |
+| global_convinfo.txt.2024093012 | Turn on Metop-C ASCAT; Monitor Planet-IQ GPSRO  |
+| global_convinfo.txt.2024120912 | Planet-IQ GPSRO  |
 | global_convinfo.txt.2025032512 | Turn on GOES 17 AMVs |
 | global_convinfo.txt.2025081312 | Windborne; Saildrone; GRACE-C/-D |
 
